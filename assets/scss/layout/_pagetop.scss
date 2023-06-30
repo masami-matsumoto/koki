@@ -1,0 +1,38 @@
+/* pagetop
+------------------------------------------------------ */
+.pagetop {
+  position: absolute;
+  right: 10px;
+  top: -15px;
+  width: 60px;
+  height: 60px;
+  a {
+    display: block;
+    width: 34px;
+    height: 34px;
+	  margin: 0 auto;
+	border-radius: 50%;
+    background: $c_text;
+    transition: background-color .3s;
+	  color: $c_white;
+	  font-size: 16px;
+	  text-decoration: none;
+    &:hover,
+    &:focus {
+      background-color: $c_key1;
+		color: $c_white;
+    }
+  }
+  @include medium {
+    width: 80px;
+    height: 80px;
+    right: 30px;
+    top: -60px;
+    a {
+      width: 80px;
+      height: 80px;
+		padding: 20px;
+		font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* heading
+------------------------------------------------------ */
+
+/*大見出し(h2相当)*/
+.heading-lv2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &+ * {
+    margin-top: 20px;
+  }
+}
+.heading-lv2__title {
+  flex-grow: 1;
+  font-size: min((16 / 375) * 100vw, 20px);
+	font-weight: normal;
+	text-align: center;
+}
+.heading-lv2__btn {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+@include medium {
+  .heading-lv2 {
+    & + * {
+      margin-top: 40px;
+    }
+  }
+  .heading-lv2__title {
+    font-size: min((20 / 1084) * 100vw, 20px);
+  }
+}
+
+/*ボタン有りの場合*/
+.heading-lv2._btn {
+  .heading-lv2__title {
+    padding-right: 90px;
+    @include medium {
+      padding-right: 110px;
+    }
+  }
+}
+/*猫アイコン有りの場合*/
+.heading-lv2._icon {
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 47px;
+    margin-right: 10px;
+    background: url(../img/ico_cat.svg) left bottom / contain no-repeat;
+  }
+}

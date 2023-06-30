@@ -1,0 +1,93 @@
+/* フレキシブルマドラー 製品仕様
+------------------------------------------------------ */
+.detail  {
+  display: flex;
+  flex-direction: column; /*サムネイルとテキストコンテンツの上下入れ替え*/
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  & + .detail {
+    margin-top: 30px;
+  }
+}
+.detail__body {
+  margin-top: 20px;
+}
+.detail__title {
+	position: relative;
+	padding-bottom: 5px;
+	width: 100%;
+	border-bottom: 2px solid $c_text;
+}
+.detail__title--main {
+	font-size: 18px;
+}
+.detail__title--sub {
+	margin-left: 1em;
+	font-size: 14px;
+	font-weight: normal;
+}
+.detail__thumb {
+	margin-top: 20px;
+}
+.detail__table {
+	margin-top: 20px;
+}
+._attn {
+	.detail__body {
+		width: 100%;
+	}
+}
+.detail__list {
+	border: 1px solid $c_key1;
+  padding: 20px;
+	margin-top: 20px;
+	 li {
+		position: relative;
+		 padding-left: 1em;
+		 &::before {
+			 position: absolute;
+    left: 0;
+    top: 0.75em;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $c_key3;
+		 }
+	}
+}
+@include medium {
+  .detail {
+    flex-direction: row; /*サムネイルとテキストコンテンツの左右入れ替え*/
+    justify-content: center;
+    max-width: none;
+    & + .detail {
+      margin-top: 80px;
+    }
+	  	&:nth-of-type(even) {
+		flex-direction: row-reverse;
+	}
+  }
+  .detail__thumb {
+    width: calc((440/1084)*100%);
+  }
+  .detail__body {
+	  margin-top: 0;
+    width: calc((400/1084)*100%);
+  }
+	.detail__title--main {
+	font-size: 32px;
+}
+	.detail__title--sub {
+		font-size: 16px;
+	}
+	.detail__thumb {
+		margin-top: 0;
+	padding: 0 30px;
+}
+  .detail__data {
+    font-size: 16px;
+  }
+}

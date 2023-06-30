@@ -1,0 +1,50 @@
+/* menu (spmenu / ftmenu)
+------------------------------------------------------ */
+/*ヘッダー・フッターのSP用メニュースタイルが同じなので、共通するスタイルだけまとめて記述しています。
+class名は分けてあるので将来的に個別に指定することになったら分離します。*/
+.spmenu__logo,
+.footer__logo {
+  width: 76px;
+  height: 103px;
+  margin: auto;
+}
+.spmenu__list,
+.ftmenu {
+  position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.spmenu__link,
+.ftmenu__link {
+  display: block;
+  padding: 10px;
+  color: $c_white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+text-transform: uppercase;
+}
+.spmenu-s,
+.ftmenu-sns {
+  margin-top: 45px;
+  line-height: 1;
+  text-align: center;
+}
+.spmenu-sns__item,
+.ftmenu-sns__item {
+  display: inline-block;
+  &:not(:first-child) {
+    border-left: 1px solid;
+  }
+}
+.spmenu-sns__link,
+.ftmenu-sns__link {
+  display: block;
+  padding: 0 5px;
+  color: inherit;
+  font-size: 12px;
+  text-decoration: none;
+}

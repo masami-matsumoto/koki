@@ -1,0 +1,49 @@
+/* メインビジュアル
+------------------------------------------------------ */
+.mainVisual {
+	display: flex;
+	flex-direction: column;
+}
+.mainVisual__catch {
+	font-size: 20px;
+	& br {
+		display: none;
+	}
+}
+.mainVisual__txt {
+	font-size: 14px;
+}
+.mainVisual__ph {
+	margin-top: 20px;
+}
+@include large {
+	.mainVisual {
+		flex-direction: row-reverse;
+	}
+	.mainVisual__body {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 300px;
+		margin-left: -60px;
+		width: 100%;
+		padding: 80px;
+		background: $c_key2;
+		color: $c_white;
+	}
+	.mainVisual__catch {
+		font-size: 48px;
+		font-weight: normal;
+		line-height: 1.2;
+		& br {
+		display: block;
+	}
+	}
+	.mainVisual__txt {
+		font-size: 24px;
+		line-height: 2;
+	}
+	.mainVisual__ph {
+	width: 100%;
+		margin-top: 60px;
+	}
+}

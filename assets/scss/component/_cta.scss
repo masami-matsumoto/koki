@@ -1,0 +1,33 @@
+/* CTA
+------------------------------------------------------ */
+.cta {
+  text-align: center;
+}
+.cta__ph {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+}
+.cta__account {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.cta__text {
+  margin-top: 20px;
+}
+.cta__btn > li:not(:first-child) {
+	margin-top: 20px;
+}
+@include medium {
+.cta__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  >li {
+    margin: 0 20px;
+	  &:not(:first-child) {
+		margin-top: 0;
+	}
+  }
+}
+}

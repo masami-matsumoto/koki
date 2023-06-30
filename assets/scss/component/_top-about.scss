@@ -1,0 +1,86 @@
+/* フレキシブルマドラーについて
+------------------------------------------------------ */
+.top-about {
+	display: flex;
+  flex-direction: column-reverse;
+  & + .top-about {
+    margin-top: 50px;
+}
+}
+.top-about__body {
+	margin-right: -20px;
+  padding: 30px 20px 50px;
+  background: $c_key2;
+	color: $c_white;
+}
+.top-about__title {
+	font-size: min((16 / 375) * 100vw, 20px);
+	font-weight: normal;
+}
+.top-about__data {
+	margin-top: 20px;
+}
+.top-about__thumb {
+	margin-left: -20px;
+  margin-right: -20px;
+}
+/*反転タイプ*/
+.top-about._reverse {
+  .top-about__body {
+    margin-right: 0;
+    margin-left: -20px;
+  }
+}
+	.top-about._1column {
+		background: none;
+		& .top-about__body {
+			color: inherit;
+			background: none;
+		}
+	}
+.top-about__logo {
+	max-width: 250px;
+	margin-top: 40px;
+}
+@include small {
+	.top-about {
+	flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 130px;
+    background: $c_key2;
+    & + .top-about {
+      margin-top: 160px;
+    }
+}
+.top-about__body {
+	flex-shrink: 0;
+	width: 50%;
+	margin: 0;
+	padding: 40px;
+	background: none;
+}
+.top-about__title {
+	font-size: min((20 / 1084) * 100vw, 20px);
+}
+.top-about__data {
+	margin-top: 50px;
+}
+	.top-about__thumb {
+		flex-grow: 1;
+    margin: 0;
+    margin-left: calc(50% - 50vw);
+    transform: translateY(-50px);
+	}
+	 /*反転タイプ*/
+  .top-about._reverse {
+    flex-direction: row;
+    .top-about__thumb {
+      margin-left: 0;
+      margin-right: calc(50% - 50vw);
+    }
+    .top-about__body {
+      margin: 0;
+    }
+  }
+}
