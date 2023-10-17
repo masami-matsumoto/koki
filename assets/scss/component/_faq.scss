@@ -33,6 +33,7 @@
   flex-grow: 1;
   margin-left: 15px;
   margin-right: 15px;
+	color: $c_black;
 }
 .faq__action {
   flex-shrink: 0;
@@ -52,6 +53,7 @@
     width: 100%;
     height: 0;
     border-top: 1px solid;
+	  color: $c_black;
     transition: all .3s;
   }
   &::after {

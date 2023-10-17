@@ -4,9 +4,10 @@
 class名は分けてあるので将来的に個別に指定することになったら分離します。*/
 .spmenu__logo,
 .footer__logo {
-  width: 76px;
-  height: 103px;
+  width: 150px;
+  height: 67px;
   margin: auto;
+	margin-top: 20px;
 }
 .spmenu__list,
 .ftmenu {
@@ -36,9 +37,6 @@ text-transform: uppercase;
 .spmenu-sns__item,
 .ftmenu-sns__item {
   display: inline-block;
-  &:not(:first-child) {
-    border-left: 1px solid;
-  }
 }
 .spmenu-sns__link,
 .ftmenu-sns__link {

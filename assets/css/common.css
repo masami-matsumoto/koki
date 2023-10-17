@@ -376,9 +376,10 @@ input[type="checkbox"]:checked + span:after {
 class名は分けてあるので将来的に個別に指定することになったら分離します。*/
 .spmenu__logo,
 .footer__logo {
-  width: 76px;
-  height: 103px;
-  margin: auto; }
+  width: 150px;
+  height: 67px;
+  margin: auto;
+  margin-top: 20px; }
 
 .spmenu__list,
 .ftmenu {
@@ -408,9 +409,6 @@ class名は分けてあるので将来的に個別に指定することになっ
 .spmenu-sns__item,
 .ftmenu-sns__item {
   display: inline-block; }
-  .spmenu-sns__item:not(:first-child),
-  .ftmenu-sns__item:not(:first-child) {
-    border-left: 1px solid; }
 
 .spmenu-sns__link,
 .ftmenu-sns__link {
@@ -1250,7 +1248,8 @@ class名は分けてあるので将来的に個別に指定することになっ
 .faq__q-text {
   flex-grow: 1;
   margin-left: 15px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  color: #000000; }
 
 .faq__action {
   flex-shrink: 0;
@@ -1269,6 +1268,7 @@ class名は分けてあるので将来的に個別に指定することになっ
     width: 100%;
     height: 0;
     border-top: 1px solid;
+    color: #000000;
     transition: all .3s; }
   .faq__action::after {
     transform: rotate(90deg); }
